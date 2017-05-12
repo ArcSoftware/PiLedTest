@@ -1,6 +1,7 @@
 package com.theironyard.charlotte.PiLedTest;
 
 import com.pi4j.io.gpio.*;
+import org.hibernate.boot.jaxb.SourceType;
 
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class RaspberryPiManager {
         gpio = GpioFactory.getInstance();
         whiteLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, "White LED", PinState.LOW);
         yellowLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_05, "Yellow LED", PinState.LOW);
-        redLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00, "Red LED", PinState.LOW);
+        redLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, "Red LED", PinState.LOW);
         greenLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_25, "Green LED", PinState.LOW);
     }
 
@@ -42,16 +43,18 @@ public class RaspberryPiManager {
             if (redLED.isHigh()) {redLED.toggle();}
             if (greenLED.isHigh()) {greenLED.toggle();}
         } else if (led.equalsIgnoreCase("blink")) {
-            blinkLEDs();
+            blinkLEDs(500l, 10000l);
         }
     }
 
-    public void blinkLEDs() {
-        whiteLED.blink(1000l);
-        yellowLED.blink(1000l);
-        redLED.blink(1000l);
-        greenLED.blink(1000l);
+    public void blinkLEDs(Long speed, Long duration) {
+        whiteLED.blink(speed, duration);
+        yellowLED.blink(speed, duration);
+        redLED.blink(speed, duration);
+        greenLED.blink(speed, duration);
+
     }
+
 
     public void consoleUI() {
 
@@ -73,8 +76,12 @@ public class RaspberryPiManager {
                 System.out.println("Green LED:" + "\n" + greenLED.getProperties() + "\n" + greenLED.getPullResistance()
                         + "\n" + greenLED.getState() + "\n");
             } else if (inputCommand.equalsIgnoreCase("blink") || inputCommand.equalsIgnoreCase("b")) {
-                blinkLEDs();
-                System.out.println("All LEDs are now blinking");
+                System.out.println("Please type in duration:");
+                Long duration = Long.valueOf(inputScanner.nextLine());
+                System.out.println("Please type in the speed in which they will blink:");
+                Long speed = Long.valueOf(inputScanner.nextLine());
+                blinkLEDs(speed, duration);
+                System.out.println("All LEDs are now blinking for " + duration + ".");
             } else if (inputCommand.equalsIgnoreCase("all off") || inputCommand.equalsIgnoreCase("o")) {
                 toggleLED("allOff");
                 System.out.println("All LEDs are now turned off");
