@@ -19,7 +19,7 @@ public class PiLedTestApplication {
 		if (onOff.equalsIgnoreCase("on")) {
 			PiLedController.myLed.high();
 		} else if (onOff.equalsIgnoreCase("off")) {
-			PiLedController.myLed.toggle();
+			PiLedController.myLed.low();
 		} else {
 			System.err.println("Invalid entry");
 
