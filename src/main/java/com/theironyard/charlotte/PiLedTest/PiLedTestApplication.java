@@ -10,7 +10,5 @@ public class PiLedTestApplication {
 
 	public static void main(String[] args) {
         SpringApplication.run(PiLedTestApplication.class, args);
-        PiLedController.consoleUI();
-
 	}
 }
