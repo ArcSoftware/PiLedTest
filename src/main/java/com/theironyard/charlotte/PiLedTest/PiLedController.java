@@ -29,7 +29,7 @@ public class PiLedController {
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String home(Model model, String led) {
-//        piManager.toggleLED(led);
+        if (led != null) { piManager.toggleLED(led);}
         return "home";
     }
 }

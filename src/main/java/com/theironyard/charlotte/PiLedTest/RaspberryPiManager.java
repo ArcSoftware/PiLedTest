@@ -13,7 +13,7 @@ public class RaspberryPiManager {
     private GpioPinDigitalOutput yellowLED;
     private GpioPinDigitalOutput redLED;
     private GpioPinDigitalOutput greenLED;
-    private boolean white, yellow, red, green;
+
 
     public RaspberryPiManager() {
         gpio = GpioFactory.getInstance();
@@ -25,56 +25,32 @@ public class RaspberryPiManager {
 
     public void toggleLED(String led) {
         if (led.equalsIgnoreCase("white")) {
-            if (white == false) {
-                whiteLED.high();
-                white = true;
-            } else {
-                whiteLED.low();
-                white = false;
-            }
+            whiteLED.toggle();
+
         } else if (led.equalsIgnoreCase("yellow")) {
-            if (yellow == false) {
-                yellowLED.high();
-                yellow = true;
-            } else {
-                yellowLED.low();
-                yellow = false;
-            }
+            yellowLED.toggle();
+
         } else if (led.equalsIgnoreCase("red")) {
-            if (red == false) {
-                redLED.high();
-                red = true;
-            } else {
-                redLED.low();
-                red = false;
-            }
+            redLED.toggle();
+
         } else if (led.equalsIgnoreCase("green")) {
-            if (green == false) {
-                greenLED.high();
-                green = true;
-            } else {
-                greenLED.low();
-                green = false;
-            }
+            greenLED.toggle();
+
         } else if (led.equalsIgnoreCase("allOff")) {
-            whiteLED.low();
-            yellowLED.low();
-            redLED.low();
-            greenLED.low();
-            white = false;
-            yellow = false;
-            red = false;
-            green = false;
+            if (whiteLED.isHigh()) {whiteLED.toggle();}
+            if (yellowLED.isHigh()) {yellowLED.toggle();}
+            if (redLED.isHigh()) {redLED.toggle();}
+            if (greenLED.isHigh()) {greenLED.toggle();}
         } else if (led.equalsIgnoreCase("blink")) {
             blinkLEDs();
         }
     }
 
     public void blinkLEDs() {
-        whiteLED.blink(1l);
-        yellowLED.blink(1l);
-        redLED.blink(1l);
-        greenLED.blink(1l);
+        whiteLED.blink(1000l);
+        yellowLED.blink(1000l);
+        redLED.blink(1000l);
+        greenLED.blink(1000l);
     }
 
     public void consoleUI() {
