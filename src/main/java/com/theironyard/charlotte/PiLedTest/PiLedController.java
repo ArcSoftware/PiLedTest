@@ -16,20 +16,6 @@ public class PiLedController {
             "My LED",           // PIN FRIENDLY NAME (optional)
             PinState.LOW);      // PIN STARTUP STATE (optional)
     // explicitly set a state on the pin object
-    public static Scanner inputScanner = new Scanner(System.in);
-
-    public static void main(String[] args) {
-        System.out.println("Led [on/off]");
-        String onOff = inputScanner.nextLine();
-        if (onOff.equalsIgnoreCase("on")) {
-            myLed.high();
-        } else if (onOff.equalsIgnoreCase("off")) {
-            myLed.toggle();
-        } else {
-            System.err.println("Invalid entry");
 
 
-        }
-
-    }
 }
