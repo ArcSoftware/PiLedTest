@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpSession;
 import java.util.Scanner;
 
 /**
@@ -32,4 +33,15 @@ public class PiLedController {
         if (led != null) { piManager.toggleLED(led);}
         return "home";
     }
+    @RequestMapping(path = "/blink", method = RequestMethod.POST)
+    public String blink(int speed, int duration) {
+        piManager.blinkLEDs(Long.valueOf(speed), Long.valueOf(duration));
+        return "redirect:/";
+    }
+    @RequestMapping(path = "/pulse", method = RequestMethod.POST)
+    public String pulse(int duration) {
+        piManager.pulseLEDs(Long.valueOf(duration));
+        return "redirect:/";
+    }
+
 }

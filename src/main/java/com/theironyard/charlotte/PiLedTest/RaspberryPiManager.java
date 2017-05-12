@@ -54,6 +54,13 @@ public class RaspberryPiManager {
         greenLED.blink(speed, duration);
 
     }
+    public void pulseLEDs(Long duration) {
+        whiteLED.pulse(duration);
+        yellowLED.pulse(duration);
+        redLED.pulse(duration);
+        greenLED.pulse(duration);
+
+    }
 
 
     public void consoleUI() {
