@@ -18,10 +18,13 @@ public class PiLedTestApplication {
 		String onOff = inputScanner.nextLine();
 		if (onOff.equalsIgnoreCase("on")) {
 			PiLedController.myLed.high();
+			System.out.println("Turning LED On!");
 		} else if (onOff.equalsIgnoreCase("off")) {
-			PiLedController.myLed.low();
+			PiLedController.myLed.toggle();
+			System.out.println("Turing LED Off..");
 		} else {
-			System.err.println("Invalid entry");
+		    PiLedController.myLed.low();
+			System.out.println("Setting LED to low");
 
 
 		}
