@@ -26,7 +26,7 @@ public class PiLedController {
     private GpioPinDigitalOutput greenLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_25, "Green LED",
             PinState.LOW);
     private boolean white, yellow, red, green = false;
-    public static PiLedController leds;
+//    public static PiLedController leds;
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String home(Model model, String led) {
@@ -91,34 +91,34 @@ public class PiLedController {
         greenLED.blink(1l);
     }
 
-    public static void consoleUI() {
-        while (true) {
-            System.out.println("Please enter your commands. \n For a list of commands, type \"help\"");
-            String inputCommand = inputScanner.nextLine();
-            if (inputCommand.equalsIgnoreCase("toggle") || inputCommand.equalsIgnoreCase("t")) {
-                System.out.println("Please enter LED to toggle:");
-                String powerled = inputScanner.nextLine();
-                leds.toggleLED(powerled);
-            } else if (inputCommand.equalsIgnoreCase("status") || inputCommand.equalsIgnoreCase("s")) {
-                System.out.println("White LED:" + "\n" + leds.whiteLED.getProperties() + "\n" + leds.whiteLED.getPullResistance()
-                        + "\n" + leds.whiteLED.getState() + "\n");
-                System.out.println("Yellow LED:" + "\n" + leds.yellowLED.getProperties() + "\n" + leds.yellowLED.getPullResistance()
-                        + "\n" + leds.yellowLED.getState() + "\n");
-                System.out.println("Red LED:" + "\n" + leds.redLED.getProperties() + "\n" + leds.redLED.getPullResistance()
-                        + "\n" + leds.redLED.getState() + "\n");
-                System.out.println("Green LED:" + "\n" + leds.greenLED.getProperties() + "\n" + leds.greenLED.getPullResistance()
-                        + "\n" + leds.greenLED.getState() + "\n");
-            } else if (inputCommand.equalsIgnoreCase("blink") || inputCommand.equalsIgnoreCase("b")) {
-                leds.blinkLEDs();
-                System.out.println("All LEDs are now blinking");
-            } else if (inputCommand.equalsIgnoreCase("all off") || inputCommand.equalsIgnoreCase("o")) {
-                leds.toggleLED("allOff");
-                System.out.println("All LEDs are now turned off");
-            } else if (inputCommand.equalsIgnoreCase("help") || inputCommand.equalsIgnoreCase("h")) {
-                System.out.println("[toggle, status, blink, all off]");
-            } else {
-                System.err.println("Invalid Entry");
-            }
-        }
-    }
+//    public static void consoleUI() {
+//        while (true) {
+//            System.out.println("Please enter your commands. \n For a list of commands, type \"help\"");
+//            String inputCommand = inputScanner.nextLine();
+//            if (inputCommand.equalsIgnoreCase("toggle") || inputCommand.equalsIgnoreCase("t")) {
+//                System.out.println("Please enter LED to toggle:");
+//                String powerled = inputScanner.nextLine();
+//                leds.toggleLED(powerled);
+//            } else if (inputCommand.equalsIgnoreCase("status") || inputCommand.equalsIgnoreCase("s")) {
+//                System.out.println("White LED:" + "\n" + leds.whiteLED.getProperties() + "\n" + leds.whiteLED.getPullResistance()
+//                        + "\n" + leds.whiteLED.getState() + "\n");
+//                System.out.println("Yellow LED:" + "\n" + leds.yellowLED.getProperties() + "\n" + leds.yellowLED.getPullResistance()
+//                        + "\n" + leds.yellowLED.getState() + "\n");
+//                System.out.println("Red LED:" + "\n" + leds.redLED.getProperties() + "\n" + leds.redLED.getPullResistance()
+//                        + "\n" + leds.redLED.getState() + "\n");
+//                System.out.println("Green LED:" + "\n" + leds.greenLED.getProperties() + "\n" + leds.greenLED.getPullResistance()
+//                        + "\n" + leds.greenLED.getState() + "\n");
+//            } else if (inputCommand.equalsIgnoreCase("blink") || inputCommand.equalsIgnoreCase("b")) {
+//                leds.blinkLEDs();
+//                System.out.println("All LEDs are now blinking");
+//            } else if (inputCommand.equalsIgnoreCase("all off") || inputCommand.equalsIgnoreCase("o")) {
+//                leds.toggleLED("allOff");
+//                System.out.println("All LEDs are now turned off");
+//            } else if (inputCommand.equalsIgnoreCase("help") || inputCommand.equalsIgnoreCase("h")) {
+//                System.out.println("[toggle, status, blink, all off]");
+//            } else {
+//                System.err.println("Invalid Entry");
+//            }
+//        }
+
 }
