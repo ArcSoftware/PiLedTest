@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.006s</div>
+<div class="counter">0.002s</div>
 <p>duration</p>
 </div>
 </td>
@@ -153,7 +153,7 @@ Caused by: java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup(
 	at com.pi4j.io.gpio.GpioFactory.getDefaultProvider(GpioFactory.java:109)
 	at com.pi4j.io.gpio.impl.GpioControllerImpl.&lt;init&gt;(GpioControllerImpl.java:56)
 	at com.pi4j.io.gpio.GpioFactory.getInstance(GpioFactory.java:91)
-	at com.theironyard.charlotte.PiLedTest.PiLedController.&lt;clinit&gt;(PiLedController.java:19)
+	at com.theironyard.charlotte.PiLedTest.PiLedController.&lt;clinit&gt;(PiLedController.java:18)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -178,7 +178,7 @@ Caused by: java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup(
 </thead>
 <tr>
 <td class="failures">contextLoads</td>
-<td>0.006s</td>
+<td>0.002s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -186,43 +186,43 @@ Caused by: java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup(
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>11:43:49.224 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
-11:43:49.232 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-11:43:49.244 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-11:43:49.271 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-11:43:49.292 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests], using SpringBootContextLoader
-11:43:49.297 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]: class path resource [com/theironyard/charlotte/PiLedTest/PiLedTestApplicationTests-context.xml] does not exist
-11:43:49.298 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]: class path resource [com/theironyard/charlotte/PiLedTest/PiLedTestApplicationTestsContext.groovy] does not exist
-11:43:49.299 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-11:43:49.301 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]: PiLedTestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:43:49.382 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
-11:43:49.395 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
-11:43:49.395 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
-11:43:49.396 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
-11:43:49.409 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [com/theironyard/charlotte/PiLedTest/] to resources [URL [file:/Users/Jake/Code/PiLedTest/build/classes/test/com/theironyard/charlotte/PiLedTest/], URL [file:/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/]]
-11:43:49.410 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/Jake/Code/PiLedTest/build/classes/test/com/theironyard/charlotte/PiLedTest]
-11:43:49.410 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/Jake/Code/PiLedTest/build/classes/test/com/theironyard/charlotte/PiLedTest] for files matching pattern [/Users/Jake/Code/PiLedTest/build/classes/test/com/theironyard/charlotte/PiLedTest/*.class]
-11:43:49.415 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest]
-11:43:49.416 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest] for files matching pattern [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/*.class]
-11:43:49.417 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/theironyard/charlotte/PiLedTest/*.class] to resources [file [/Users/Jake/Code/PiLedTest/build/classes/test/com/theironyard/charlotte/PiLedTest/PiLedTestApplicationTests.class], file [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/PiLedController.class], file [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/PiLedTestApplication.class]]
-11:43:49.487 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/PiLedTestApplication.class]
-11:43:49.490 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.theironyard.charlotte.PiLedTest.PiLedTestApplication for test class com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests
-11:43:49.497 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]: using defaults.
-11:43:49.505 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-11:43:49.541 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7ee65cd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4e1bb47a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3d770984, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6a56c288, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1ee20202, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@dc9ddc0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@877ded4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@54e91fd0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5a15e55d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@19f10402, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2fc6f896, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@334d6521]
-11:43:49.544 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
-11:43:49.545 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
-11:43:49.546 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
-11:43:49.546 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
-11:43:49.554 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@c49076c testClass = PiLedTestApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1577e238 testClass = PiLedTestApplicationTests, locations = '{}', classes = '{class com.theironyard.charlotte.PiLedTest.PiLedTestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@3b5dfc04, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@254937fe, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7f39e28b], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
-11:43:49.555 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
-11:43:49.556 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
-11:43:49.640 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
-11:43:49.641 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
-11:43:49.641 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
-11:43:49.645 [Test worker] DEBUG org.springframework.core.env.MutablePropertySources - Adding [inline] PropertySource with highest search precedence
-11:43:49.651 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
-11:43:49.651 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
+<pre>12:01:52.753 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
+12:01:52.762 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+12:01:52.779 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+12:01:52.800 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+12:01:52.822 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests], using SpringBootContextLoader
+12:01:52.827 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]: class path resource [com/theironyard/charlotte/PiLedTest/PiLedTestApplicationTests-context.xml] does not exist
+12:01:52.828 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]: class path resource [com/theironyard/charlotte/PiLedTest/PiLedTestApplicationTestsContext.groovy] does not exist
+12:01:52.828 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+12:01:52.830 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]: PiLedTestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:01:52.911 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
+12:01:52.923 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+12:01:52.923 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+12:01:52.924 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+12:01:52.938 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [com/theironyard/charlotte/PiLedTest/] to resources [URL [file:/Users/Jake/Code/PiLedTest/build/classes/test/com/theironyard/charlotte/PiLedTest/], URL [file:/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/]]
+12:01:52.939 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/Jake/Code/PiLedTest/build/classes/test/com/theironyard/charlotte/PiLedTest]
+12:01:52.940 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/Jake/Code/PiLedTest/build/classes/test/com/theironyard/charlotte/PiLedTest] for files matching pattern [/Users/Jake/Code/PiLedTest/build/classes/test/com/theironyard/charlotte/PiLedTest/*.class]
+12:01:52.944 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest]
+12:01:52.944 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest] for files matching pattern [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/*.class]
+12:01:52.945 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/theironyard/charlotte/PiLedTest/*.class] to resources [file [/Users/Jake/Code/PiLedTest/build/classes/test/com/theironyard/charlotte/PiLedTest/PiLedTestApplicationTests.class], file [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/PiLedController.class], file [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/PiLedTestApplication.class]]
+12:01:53.010 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/PiLedTestApplication.class]
+12:01:53.011 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.theironyard.charlotte.PiLedTest.PiLedTestApplication for test class com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests
+12:01:53.016 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]: using defaults.
+12:01:53.024 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+12:01:53.059 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@45c052f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8b52e8b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@307039f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@a3df707, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6eacee12, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4fcc543a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@74ecada7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@110cf9f2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@18d949bf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3519b31a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2409a18b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@523c1f91]
+12:01:53.062 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
+12:01:53.063 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
+12:01:53.064 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
+12:01:53.064 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
+12:01:53.070 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@7d2cb895 testClass = PiLedTestApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@11993fa6 testClass = PiLedTestApplicationTests, locations = '{}', classes = '{class com.theironyard.charlotte.PiLedTest.PiLedTestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@4aa1b41, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2d669ed0, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5ca61b4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+12:01:53.071 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
+12:01:53.072 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests]
+12:01:53.157 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+12:01:53.158 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+12:01:53.158 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+12:01:53.160 [Test worker] DEBUG org.springframework.core.env.MutablePropertySources - Adding [inline] PropertySource with highest search precedence
+12:01:53.166 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+12:01:53.167 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -232,26 +232,26 @@ Caused by: java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup(
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.5.3.RELEASE)
 
-2017-05-12 11:43:50.026  INFO 40390 --- [    Test worker] c.t.c.P.PiLedTestApplicationTests        : Starting PiLedTestApplicationTests on Jakes-MacBook-Pro.local with PID 40390 (started by Jake in /Users/Jake/Code/PiLedTest)
-2017-05-12 11:43:50.030  INFO 40390 --- [    Test worker] c.t.c.P.PiLedTestApplicationTests        : No active profile set, falling back to default profiles: default
-2017-05-12 11:43:50.098  INFO 40390 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5090697e: startup date [Fri May 12 11:43:50 EDT 2017]; root of context hierarchy
-2017-05-12 11:43:53.062  INFO 40390 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-05-12 11:43:53.095  INFO 40390 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2017-05-12 12:01:53.687  INFO 40465 --- [    Test worker] c.t.c.P.PiLedTestApplicationTests        : Starting PiLedTestApplicationTests on Jakes-MacBook-Pro.local with PID 40465 (started by Jake in /Users/Jake/Code/PiLedTest)
+2017-05-12 12:01:53.690  INFO 40465 --- [    Test worker] c.t.c.P.PiLedTestApplicationTests        : No active profile set, falling back to default profiles: default
+2017-05-12 12:01:53.762  INFO 40465 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@13fef55e: startup date [Fri May 12 12:01:53 EDT 2017]; root of context hierarchy
+2017-05-12 12:01:56.681  INFO 40465 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-12 12:01:56.710  INFO 40465 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2017-05-12 11:43:53.224  INFO 40390 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
-2017-05-12 11:43:53.228  INFO 40390 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2017-05-12 11:43:53.232  INFO 40390 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2017-05-12 11:43:53.307  INFO 40390 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2017-05-12 11:43:53.467  INFO 40390 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2017-05-12 11:43:53.967  INFO 40390 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
-2017-05-12 11:43:53.979  INFO 40390 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
-2017-05-12 11:43:54.025  INFO 40390 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2017-05-12 11:43:54.089 ERROR 40390 --- [    Test worker] com.pi4j.util.NativeLibraryLoader        : Unable to load [libpi4j.so] using path: [/lib/raspberrypi/static/libpi4j.so]
+2017-05-12 12:01:56.824  INFO 40465 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-12 12:01:56.828  INFO 40465 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-05-12 12:01:56.832  INFO 40465 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-05-12 12:01:56.896  INFO 40465 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-12 12:01:57.030  INFO 40465 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-05-12 12:01:57.500  INFO 40465 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2017-05-12 12:01:57.507  INFO 40465 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2017-05-12 12:01:57.546  INFO 40465 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-12 12:01:57.607 ERROR 40465 --- [    Test worker] com.pi4j.util.NativeLibraryLoader        : Unable to load [libpi4j.so] using path: [/lib/raspberrypi/static/libpi4j.so]
 
-java.lang.UnsatisfiedLinkError: /private/var/folders/th/sfj3pyr51_q76prpgk6bx5xm0000gn/T/libpi4j9001214074837115784.so: dlopen(/private/var/folders/th/sfj3pyr51_q76prpgk6bx5xm0000gn/T/libpi4j9001214074837115784.so, 1): no suitable image found.  Did find:
-	/private/var/folders/th/sfj3pyr51_q76prpgk6bx5xm0000gn/T/libpi4j9001214074837115784.so: unknown file type, first eight bytes: 0x7F 0x45 0x4C 0x46 0x01 0x01 0x01 0x00
-	/private/var/folders/th/sfj3pyr51_q76prpgk6bx5xm0000gn/T/libpi4j9001214074837115784.so: unknown file type, first eight bytes: 0x7F 0x45 0x4C 0x46 0x01 0x01 0x01 0x00
+java.lang.UnsatisfiedLinkError: /private/var/folders/th/sfj3pyr51_q76prpgk6bx5xm0000gn/T/libpi4j1982846468005345051.so: dlopen(/private/var/folders/th/sfj3pyr51_q76prpgk6bx5xm0000gn/T/libpi4j1982846468005345051.so, 1): no suitable image found.  Did find:
+	/private/var/folders/th/sfj3pyr51_q76prpgk6bx5xm0000gn/T/libpi4j1982846468005345051.so: unknown file type, first eight bytes: 0x7F 0x45 0x4C 0x46 0x01 0x01 0x01 0x00
+	/private/var/folders/th/sfj3pyr51_q76prpgk6bx5xm0000gn/T/libpi4j1982846468005345051.so: unknown file type, first eight bytes: 0x7F 0x45 0x4C 0x46 0x01 0x01 0x01 0x00
 	at java.lang.ClassLoader$NativeLibrary.load(Native Method) ~[na:1.8.0_121]
 	at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1941) ~[na:1.8.0_121]
 	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1824) ~[na:1.8.0_121]
@@ -267,7 +267,7 @@ java.lang.UnsatisfiedLinkError: /private/var/folders/th/sfj3pyr51_q76prpgk6bx5xm
 	at com.pi4j.io.gpio.GpioFactory.getDefaultProvider(GpioFactory.java:109) [pi4j-core-1.1.jar:na]
 	at com.pi4j.io.gpio.impl.GpioControllerImpl.&lt;init&gt;(GpioControllerImpl.java:56) [pi4j-core-1.1.jar:na]
 	at com.pi4j.io.gpio.GpioFactory.getInstance(GpioFactory.java:91) [pi4j-core-1.1.jar:na]
-	at com.theironyard.charlotte.PiLedTest.PiLedController.&lt;clinit&gt;(PiLedController.java:19) [main/:na]
+	at com.theironyard.charlotte.PiLedTest.PiLedController.&lt;clinit&gt;(PiLedController.java:18) [main/:na]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) [na:1.8.0_121]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) [na:1.8.0_121]
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) [na:1.8.0_121]
@@ -339,14 +339,14 @@ java.lang.UnsatisfiedLinkError: /private/var/folders/th/sfj3pyr51_q76prpgk6bx5xm
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_121]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_121]
 
-2017-05-12 11:43:54.094  WARN 40390 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'piLedController' defined in file [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/PiLedController.class]: Instantiation of bean failed; nested exception is java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup()I
-2017-05-12 11:43:54.095  INFO 40390 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2017-05-12 11:43:54.096  INFO 40390 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
-2017-05-12 11:43:54.098  INFO 40390 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
-2017-05-12 11:43:54.117  INFO 40390 --- [    Test worker] utoConfigurationReportLoggingInitializer : 
+2017-05-12 12:01:57.612  WARN 40465 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'piLedController' defined in file [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/PiLedController.class]: Instantiation of bean failed; nested exception is java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup()I
+2017-05-12 12:01:57.612  INFO 40465 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-05-12 12:01:57.613  INFO 40465 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2017-05-12 12:01:57.613  INFO 40465 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2017-05-12 12:01:57.625  INFO 40465 --- [    Test worker] utoConfigurationReportLoggingInitializer : 
 
 Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2017-05-12 11:43:54.124 ERROR 40390 --- [    Test worker] o.s.boot.SpringApplication               : Application startup failed
+2017-05-12 12:01:57.633 ERROR 40465 --- [    Test worker] o.s.boot.SpringApplication               : Application startup failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'piLedController' defined in file [/Users/Jake/Code/PiLedTest/build/classes/main/com/theironyard/charlotte/PiLedTest/PiLedController.class]: Instantiation of bean failed; nested exception is java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup()I
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1155) ~[spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
@@ -422,7 +422,7 @@ Caused by: java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup(
 	at com.pi4j.io.gpio.GpioFactory.getDefaultProvider(GpioFactory.java:109) ~[pi4j-core-1.1.jar:na]
 	at com.pi4j.io.gpio.impl.GpioControllerImpl.&lt;init&gt;(GpioControllerImpl.java:56) ~[pi4j-core-1.1.jar:na]
 	at com.pi4j.io.gpio.GpioFactory.getInstance(GpioFactory.java:91) ~[pi4j-core-1.1.jar:na]
-	at com.theironyard.charlotte.PiLedTest.PiLedController.&lt;clinit&gt;(PiLedController.java:19) ~[main/:na]
+	at com.theironyard.charlotte.PiLedTest.PiLedController.&lt;clinit&gt;(PiLedController.java:18) ~[main/:na]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_121]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_121]
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_121]
@@ -432,7 +432,7 @@ Caused by: java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup(
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1147) ~[spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
 	... 63 common frames omitted
 
-2017-05-12 11:43:54.130 ERROR 40390 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7ee65cd] to prepare test instance [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests@2ef170d0]
+2017-05-12 12:01:57.638 ERROR 40465 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@45c052f] to prepare test instance [com.theironyard.charlotte.PiLedTest.PiLedTestApplicationTests@c76eead]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.3.8.RELEASE.jar:4.3.8.RELEASE]
@@ -511,7 +511,7 @@ Caused by: java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup(
 	at com.pi4j.io.gpio.GpioFactory.getDefaultProvider(GpioFactory.java:109) ~[pi4j-core-1.1.jar:na]
 	at com.pi4j.io.gpio.impl.GpioControllerImpl.&lt;init&gt;(GpioControllerImpl.java:56) ~[pi4j-core-1.1.jar:na]
 	at com.pi4j.io.gpio.GpioFactory.getInstance(GpioFactory.java:91) ~[pi4j-core-1.1.jar:na]
-	at com.theironyard.charlotte.PiLedTest.PiLedController.&lt;clinit&gt;(PiLedController.java:19) ~[main/:na]
+	at com.theironyard.charlotte.PiLedTest.PiLedController.&lt;clinit&gt;(PiLedController.java:18) ~[main/:na]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_121]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_121]
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_121]
@@ -532,7 +532,7 @@ Caused by: java.lang.UnsatisfiedLinkError: com.pi4j.wiringpi.Gpio.wiringPiSetup(
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 3.4.1</a> at May 12, 2017 11:43:54 AM</p>
+<a href="http://www.gradle.org">Gradle 3.4.1</a> at May 12, 2017 12:01:57 PM</p>
 </div>
 </div>
 </body>

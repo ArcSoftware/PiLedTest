@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpSession;
 import java.util.Scanner;
 
 /**
@@ -18,13 +17,13 @@ import java.util.Scanner;
 public class PiLedController {
     public static final GpioController gpio = GpioFactory.getInstance();
     public static Scanner inputScanner = new Scanner(System.in);
-    GpioPinDigitalOutput whiteLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, "White LED",
+    private GpioPinDigitalOutput whiteLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, "White LED",
             PinState.LOW);
-    GpioPinDigitalOutput yellowLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_05, "Yellow LED",
+    private GpioPinDigitalOutput yellowLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_05, "Yellow LED",
             PinState.LOW);
-    GpioPinDigitalOutput redLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00, "Red LED",
+    private GpioPinDigitalOutput redLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00, "Red LED",
             PinState.LOW);
-    GpioPinDigitalOutput greenLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_25, "Green LED",
+    private GpioPinDigitalOutput greenLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_25, "Green LED",
             PinState.LOW);
     private boolean white, yellow, red, green = false;
     public static PiLedController leds;
@@ -34,6 +33,9 @@ public class PiLedController {
         toggleLED(led);
         return "home";
     }
+
+
+
 
     public void toggleLED(String led) {
         if (led.equalsIgnoreCase("white")) {
@@ -118,21 +120,5 @@ public class PiLedController {
                 System.err.println("Invalid Entry");
             }
         }
-    }
-
-    public GpioPinDigitalOutput getWhiteLED() {
-        return whiteLED;
-    }
-
-    public GpioPinDigitalOutput getYellowLED() {
-        return yellowLED;
-    }
-
-    public GpioPinDigitalOutput getRedLED() {
-        return redLED;
-    }
-
-    public GpioPinDigitalOutput getGreenLED() {
-        return greenLED;
     }
 }
