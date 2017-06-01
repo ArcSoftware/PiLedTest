@@ -1,14 +1,9 @@
 package com.theironyard.charlotte.PiLedTest;
 
-import com.pi4j.io.gpio.*;
-import com.pi4j.io.gpio.trigger.GpioSetStateTrigger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import javax.servlet.http.HttpSession;
-import java.util.Scanner;
 
 /**
  * Created by Jake on 5/11/17.
@@ -35,6 +30,7 @@ public class PiLedController {
     }
     @RequestMapping(path = "/blink", method = RequestMethod.POST)
     public String blink(int speed, int duration) {
+        speed = (String.valueOf(speed).equals(null))? 100: speed;
         piManager.blinkLEDs(Long.valueOf(speed), Long.valueOf(duration));
         return "redirect:/";
     }
