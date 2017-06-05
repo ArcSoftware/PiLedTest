@@ -29,7 +29,7 @@ public class PiLedController {
         return "home";
     }
     @RequestMapping(path = "/blink", method = RequestMethod.POST)
-    public String blink(int speed, int duration) {
+    public String blink(Integer speed, Integer duration) {
         speed = (String.valueOf(speed).equals(null))? 100: speed;
         piManager.blinkLEDs(Long.valueOf(speed), Long.valueOf(duration));
         return "redirect:/";
