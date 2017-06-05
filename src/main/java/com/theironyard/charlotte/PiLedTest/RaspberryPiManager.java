@@ -50,12 +50,14 @@ public class RaspberryPiManager {
         greenLED.blink(speed, duration);
 
     }
-    public void specialMode(String mode, Integer duration) {
+    public void specialMode(String mode, Integer duration) throws InterruptedException {
         allOff();
         if (mode.equalsIgnoreCase("police")) {
+            Thread.sleep(1000);
             whiteLED.toggle();
             for (int i = 1000; i < duration; i+= 1000) {
                 whiteLED.blink(100l, 500l);
+                Thread.sleep(1000);
                 yellowLED.blink(100l, 500l);
             }
 
