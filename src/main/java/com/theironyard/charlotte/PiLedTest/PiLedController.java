@@ -28,15 +28,18 @@ public class PiLedController {
         if (led != null) { piManager.toggleLED(led);}
         return "home";
     }
+
     @RequestMapping(path = "/blink", method = RequestMethod.POST)
     public String blink(Integer speed, Integer duration) {
         speed = speed == null ? 100 : speed;
         piManager.blinkLEDs(Long.valueOf(speed), Long.valueOf(duration));
         return "redirect:/";
     }
-    @RequestMapping(path = "/pulse", method = RequestMethod.POST)
-    public String pulse(int duration) {
-        piManager.pulseLEDs(Long.valueOf(duration));
+
+    @RequestMapping(path = "/special", method = RequestMethod.POST)
+    public String special(String mode, Integer duration) {
+        duration = duration == null ? 5000 : duration;
+        piManager.specialMode(mode, duration);
         return "redirect:/";
     }
 

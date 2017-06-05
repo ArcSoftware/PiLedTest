@@ -1,7 +1,6 @@
 package com.theironyard.charlotte.PiLedTest;
 
 import com.pi4j.io.gpio.*;
-import org.hibernate.boot.jaxb.SourceType;
 
 import java.util.Scanner;
 
@@ -38,10 +37,7 @@ public class RaspberryPiManager {
             greenLED.toggle();
 
         } else if (led.equalsIgnoreCase("allOff")) {
-            if (whiteLED.isHigh()) {whiteLED.toggle();}
-            if (yellowLED.isHigh()) {yellowLED.toggle();}
-            if (redLED.isHigh()) {redLED.toggle();}
-            if (greenLED.isHigh()) {greenLED.toggle();}
+            allOff();
         } else if (led.equalsIgnoreCase("blink")) {
             blinkLEDs(500l, 10000l);
         }
@@ -54,12 +50,35 @@ public class RaspberryPiManager {
         greenLED.blink(speed, duration);
 
     }
-    public void pulseLEDs(Long duration) {
-        whiteLED.pulse(duration);
-        yellowLED.pulse(duration);
-        redLED.pulse(duration);
-        greenLED.pulse(duration);
+    public void specialMode(String mode, Integer duration) {
+        allOff();
+        if (mode.equalsIgnoreCase("police")) {
+            for (int i = 0; (duration/1000) < i; i++) {
+                whiteLED.blink(100l, 500l);
+                yellowLED.blink(100l, 500l);
+            }
 
+        } else if (mode.equalsIgnoreCase("yellow")) {
+            yellowLED.toggle();
+
+        } else if (mode.equalsIgnoreCase("red")) {
+            redLED.toggle();
+
+        } else if (mode.equalsIgnoreCase("green")) {
+            greenLED.toggle();
+
+        } else if (mode.equalsIgnoreCase("allOff")) {
+            allOff();
+        } else if (mode.equalsIgnoreCase("blink")) {
+            blinkLEDs(500l, 10000l);
+        }
+    }
+
+    public void allOff() {
+        if (whiteLED.isHigh()) {whiteLED.toggle();}
+        if (yellowLED.isHigh()) {yellowLED.toggle();}
+        if (redLED.isHigh()) {redLED.toggle();}
+        if (greenLED.isHigh()) {greenLED.toggle();}
     }
 
 
