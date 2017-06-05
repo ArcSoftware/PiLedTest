@@ -53,7 +53,8 @@ public class RaspberryPiManager {
     public void specialMode(String mode, Integer duration) {
         allOff();
         if (mode.equalsIgnoreCase("police")) {
-            for (int i = 0; i < (duration/1000); i++) {
+            whiteLED.toggle();
+            for (int i = 1000; i < duration; i+= 1000) {
                 whiteLED.blink(100l, 500l);
                 yellowLED.blink(100l, 500l);
             }
