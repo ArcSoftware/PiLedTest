@@ -17,9 +17,9 @@ public class PiLedController {
 
         // booting up a new thread
         // so we can while(true) the input.
-        new Thread(() -> {
-            piManager.consoleUI();
-        }).start();
+//        new Thread(() -> {
+//            piManager.consoleUI();
+//        }).start();
     }
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
@@ -35,11 +35,11 @@ public class PiLedController {
         return "redirect:/";
     }
 
-//    @RequestMapping(path = "/special", method = RequestMethod.POST)
-//    public String special(String mode, Integer duration) throws InterruptedException {
-//        duration = duration == null ? 5000 : duration;
-//        piManager.specialMode(mode, duration);
-//        return "redirect:/";
-//    }
+    @RequestMapping(path = "/special", method = RequestMethod.POST)
+    public String special(String mode, Integer duration) throws InterruptedException {
+        duration = duration == null ? 50 : duration;
+        piManager.specialMode(mode, duration);
+        return "redirect:/";
+    }
 
 }
