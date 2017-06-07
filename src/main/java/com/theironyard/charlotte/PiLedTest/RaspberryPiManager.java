@@ -52,24 +52,25 @@ public class RaspberryPiManager {
         yellowLED.blink(speed, duration);
         redLED.blink(speed, duration);
         greenLED.blink(speed, duration);
+        blueLED.blink(speed, duration);
 
     }
-    public synchronized void specialMode(String mode, Integer duration) throws InterruptedException {
-        allOff();
-        if (mode.equalsIgnoreCase("police")) {
-            Thread.sleep(1000);
-            //Runtime.getRuntime().wait(1000);
-            whiteLED.toggle();
-            for (int i = 1000; i < duration; i+= 1000) {
-                whiteLED.blink(100l, 500l);
-                Thread.sleep(1000);
-                yellowLED.blink(100l, 500l);
-            }
-
-        } else if (mode.equalsIgnoreCase("yellow")) {
-            yellowLED.toggle();
-        }
-    }
+//    public synchronized void specialMode(String mode, Integer duration) throws InterruptedException {
+//        allOff();
+//        if (mode.equalsIgnoreCase("police")) {
+//            Thread.sleep(1000);
+//            //Runtime.getRuntime().wait(1000);
+//            whiteLED.toggle();
+//            for (int i = 1000; i < duration; i+= 1000) {
+//                whiteLED.blink(100l, 500l);
+//                Thread.sleep(1000);
+//                yellowLED.blink(100l, 500l);
+//            }
+//
+//        } else if (mode.equalsIgnoreCase("yellow")) {
+//            yellowLED.toggle();
+//        }
+//    }
 
     public void allOff() {
         if (whiteLED.isHigh()) {whiteLED.toggle();}

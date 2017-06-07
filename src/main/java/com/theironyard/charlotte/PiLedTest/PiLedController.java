@@ -1,7 +1,6 @@
 package com.theironyard.charlotte.PiLedTest;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -24,7 +23,7 @@ public class PiLedController {
     }
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String home(Model model, String led) {
+    public String home(String led) {
         if (led != null) { piManager.toggleLED(led);}
         return "home";
     }
@@ -36,11 +35,11 @@ public class PiLedController {
         return "redirect:/";
     }
 
-    @RequestMapping(path = "/special", method = RequestMethod.POST)
-    public String special(String mode, Integer duration) throws InterruptedException {
-        duration = duration == null ? 5000 : duration;
-        piManager.specialMode(mode, duration);
-        return "redirect:/";
-    }
+//    @RequestMapping(path = "/special", method = RequestMethod.POST)
+//    public String special(String mode, Integer duration) throws InterruptedException {
+//        duration = duration == null ? 5000 : duration;
+//        piManager.specialMode(mode, duration);
+//        return "redirect:/";
+//    }
 
 }
