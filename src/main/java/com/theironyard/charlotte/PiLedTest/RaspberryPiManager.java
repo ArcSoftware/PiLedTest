@@ -61,6 +61,11 @@ public class RaspberryPiManager {
             Thread.sleep(200);
             policeMode(duration);
         }
+        if (mode.equalsIgnoreCase("sequential")) {
+            allOff();
+            Thread.sleep(200);
+            sequential(duration);
+        }
     }
 
     public void allOff() {
@@ -84,6 +89,20 @@ public class RaspberryPiManager {
             System.out.println("odd" + duration);
             Thread.sleep(400);
         }
+    }
+
+    public void sequential(int duration) throws InterruptedException {
+        if(duration > 0) {
+            sequential(-- duration);
+        }
+        redLED.blink(800, 1600);
+        Thread.sleep(800);
+        greenLED.blink(800, 1600);
+        Thread.sleep(800);
+        blueLED.blink(800, 1600);
+        Thread.sleep(800);
+        yellowLED.blink(800, 1600);
+        Thread.sleep(800);
     }
 //    public void consoleUI() {
 //
