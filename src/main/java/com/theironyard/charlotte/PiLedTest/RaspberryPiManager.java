@@ -75,11 +75,11 @@ public class RaspberryPiManager {
             policeMode(-- duration);
         }
         if (duration%2 == 0) {
-            blueLED.blink(200, 400);
+            blueLED.blink(100, 400);
             System.out.println("even" + duration);
             Thread.sleep(400);
         } else {
-            whiteLED.blink(200, 400);
+            whiteLED.blink(100, 400);
             System.out.println("odd" + duration);
             Thread.sleep(400);
         }
