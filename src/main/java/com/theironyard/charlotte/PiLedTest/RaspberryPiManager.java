@@ -13,6 +13,7 @@ public class RaspberryPiManager {
     private GpioPinDigitalOutput yellowLED;
     private GpioPinDigitalOutput redLED;
     private GpioPinDigitalOutput greenLED;
+    private GpioPinDigitalOutput blueLED;
 
 
     public RaspberryPiManager() {
@@ -21,6 +22,7 @@ public class RaspberryPiManager {
         yellowLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_05, "Yellow LED", PinState.LOW);
         redLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, "Red LED", PinState.LOW);
         greenLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_25, "Green LED", PinState.LOW);
+        blueLED = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_03, "Blue LED", PinState.LOW);
     }
 
     public void toggleLED(String led) {
@@ -35,6 +37,8 @@ public class RaspberryPiManager {
 
         } else if (led.equalsIgnoreCase("green")) {
             greenLED.toggle();
+        } else if (led.equalsIgnoreCase("blue")) {
+            blueLED.toggle();
 
         } else if (led.equalsIgnoreCase("allOff")) {
             allOff();
@@ -50,10 +54,11 @@ public class RaspberryPiManager {
         greenLED.blink(speed, duration);
 
     }
-    public void specialMode(String mode, Integer duration) throws InterruptedException {
+    public synchronized void specialMode(String mode, Integer duration) throws InterruptedException {
         allOff();
         if (mode.equalsIgnoreCase("police")) {
             Thread.sleep(1000);
+            //Runtime.getRuntime().wait(1000);
             whiteLED.toggle();
             for (int i = 1000; i < duration; i+= 1000) {
                 whiteLED.blink(100l, 500l);
@@ -63,17 +68,6 @@ public class RaspberryPiManager {
 
         } else if (mode.equalsIgnoreCase("yellow")) {
             yellowLED.toggle();
-
-        } else if (mode.equalsIgnoreCase("red")) {
-            redLED.toggle();
-
-        } else if (mode.equalsIgnoreCase("green")) {
-            greenLED.toggle();
-
-        } else if (mode.equalsIgnoreCase("allOff")) {
-            allOff();
-        } else if (mode.equalsIgnoreCase("blink")) {
-            blinkLEDs(500l, 10000l);
         }
     }
 
@@ -82,6 +76,7 @@ public class RaspberryPiManager {
         if (yellowLED.isHigh()) {yellowLED.toggle();}
         if (redLED.isHigh()) {redLED.toggle();}
         if (greenLED.isHigh()) {greenLED.toggle();}
+        if (blueLED.isHigh()) {blueLED.toggle();}
     }
 
 

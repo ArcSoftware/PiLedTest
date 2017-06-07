@@ -37,7 +37,7 @@ public class PiLedController {
     }
 
     @RequestMapping(path = "/special", method = RequestMethod.POST)
-    public String special(String mode, Integer duration) {
+    public String special(String mode, Integer duration) throws InterruptedException {
         duration = duration == null ? 5000 : duration;
         piManager.specialMode(mode, duration);
         return "redirect:/";
