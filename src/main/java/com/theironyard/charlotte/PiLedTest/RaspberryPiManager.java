@@ -55,6 +55,7 @@ public class RaspberryPiManager {
     }
     public synchronized void specialMode(String mode, Integer duration) throws InterruptedException {
         allOff();
+        duration *= 2;
         if (mode.equalsIgnoreCase("police")) {
             allOff();
             Thread.sleep(200);
